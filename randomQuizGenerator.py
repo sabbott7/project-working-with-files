@@ -30,7 +30,7 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
             #       3. place the randomly-generated quizzes in the 'quizzes' directory.
             #       4. place the corresponding answers in the 'answers' directory.
 
-initdir = os.getcwd()
+
 #create folders -> 'quizzes' and 'answers'
 os.mkdir("./quizzes")
 os.mkdir("./answers")
@@ -39,11 +39,13 @@ for quizNum in range(5):
 
 # Create the quiz and answer key files.
 
-    quizpath = os.path.join(initdir,'quizzes','capitalsquiz%s.txt' % (quizNum + 1))
+    quizpath = os.path.join('quizzes','capitalsquiz%s.txt' % (quizNum + 1))
     quizFile = open(quizpath,'w')
+    print(quizpath)
 
-    answerpath = os.path.join(initdir,'answers','capitalsquiz_answers%s.txt' % (quizNum + 1))
+    answerpath = os.path.join('answers','capitalsquiz_answers%s.txt' % (quizNum + 1))
     answerKeyFile = open(answerpath,'w')
+    print(answerpath)
 
 #    quizFile = open('capitalsquiz%s.txt' % (quizNum + 1), 'w')
 #    answerKeyFile = open('capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
