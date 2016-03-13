@@ -4,10 +4,6 @@
 
 import random, os
 
-#create folders -> 'quizzes' and 'answers'
-os.makedirs('./answers', exist_ok=True)           
-os.makedirs('./quizzes', exist_ok=True)
-
 # The quiz data. Keys are states and values are their capitals.
 capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
             'Arkansas': 'Little Rock', 'California': 'Sacramento', 'Colorado': 'Denver',
@@ -34,6 +30,9 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
             #       3. place the randomly-generated quizzes in the 'quizzes' directory.
             #       4. place the corresponding answers in the 'answers' directory.
             
+#create folders -> 'quizzes' and 'answers'
+os.makedirs('answers', exist_ok=True)           
+os.makedirs('quizzes', exist_ok=True)
 
 # 1.Generate 5 quiz files
 for quizNum in range(5):
