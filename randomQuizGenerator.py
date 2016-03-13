@@ -4,6 +4,10 @@
 
 import random, os
 
+#create folders -> 'quizzes' and 'answers'
+os.mkdir("./answers")           
+os.mkdir("./quizzes")
+
 # The quiz data. Keys are states and values are their capitals.
 capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
             'Arkansas': 'Little Rock', 'California': 'Sacramento', 'Colorado': 'Denver',
@@ -31,22 +35,14 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
             #       4. place the corresponding answers in the 'answers' directory.
 
 
-#create folders -> 'quizzes' and 'answers'
-os.mkdir('./answers')           
-os.mkdir('./quizzes')
-
 # 1.Generate 5 quiz files
 for quizNum in range(5):
 
 # Create the quiz and answer key files.
 
-    answerpath = os.path.join('./answers','capitalsquiz_answers%s.txt' % (quizNum + 1))
-    answerKeyFile = open(answerpath,'w')
-#   print(answerpath)
+    answerKeyFile = open('./answers/capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
 
-    quizpath = os.path.join('./quizzes','capitalsquiz%s.txt' % (quizNum + 1))
-    quizFile = open(quizpath,'w')
-#   print(quizpath)
+    quizFile = open('./quizzes/capitalsquiz%s.txt' % (quizNum + 1),'w')
 
 #    quizFile = open('capitalsquiz%s.txt' % (quizNum + 1), 'w')
 #    answerKeyFile = open('capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
