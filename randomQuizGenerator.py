@@ -39,10 +39,8 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 for quizNum in range(5):
 
 # Create the quiz and answer key files.
-
-    answerKeyFile = open('./answers/capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
-
     quizFile = open('./quizzes/capitalsquiz%s.txt' % (quizNum + 1),'w')
+    answerKeyFile = open('./answers/capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
 
 #    quizFile = open('capitalsquiz%s.txt' % (quizNum + 1), 'w')
 #    answerKeyFile = open('capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
@@ -59,26 +57,26 @@ for quizNum in range(5):
 # TODO: Loop through all 50 states, making a question for each.
 
     # Get right and wrong answers.
-    for questionNum in range(50):
+for questionNum in range(50):
  
-        correctAnswer = capitals[states[questionNum]]
-        wrongAnswers = list(capitals.values())
-        del wrongAnswers[wrongAnswers.index(correctAnswer)]
-        wrongAnswers = random.sample(wrongAnswers, 3)
-        answerOptions = wrongAnswers + [correctAnswer]
-        random.shuffle(answerOptions)
+    correctAnswer = capitals[states[questionNum]]
+    wrongAnswers = list(capitals.values())
+    del wrongAnswers[wrongAnswers.index(correctAnswer)]
+    wrongAnswers = random.sample(wrongAnswers, 3)
+    answerOptions = wrongAnswers + [correctAnswer]
+    random.shuffle(answerOptions)
 
-    # TODO: Write the question and answer options to the quiz file.
+# TODO: Write the question and answer options to the quiz file.
 
-    # Write the question and the answer options to the quiz file.
+# Write the question and the answer options to the quiz file.
     
-        quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1,states[questionNum]))
-        for i in range(4):
-             quizFile.write('    %s. %s\n' % ('ABCD'[i], answerOptions[i]))
-        quizFile.write('\n')   
+quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1,states[questionNum]))
+for i in range(4):
+    quizFile.write('    %s. %s\n' % ('ABCD'[i], answerOptions[i]))
+quizFile.write('\n')   
 
-    # TODO: Write the answer key to a file.
-        answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
+# TODO: Write the answer key to a file.
+answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
 
 quizFile.close()
 answerKeyFile.close()            
