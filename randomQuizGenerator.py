@@ -32,8 +32,8 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 
 
 #create folders -> 'quizzes' and 'answers'
-os.mkdir("./quizzes")
-os.mkdir("./answers")
+os.mkdir('quizzes')
+os.mkdir('answers')
 # 1.Generate 5 quiz files
 for quizNum in range(5):
 
