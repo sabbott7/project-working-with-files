@@ -32,18 +32,19 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 
 
 #create folders -> 'quizzes' and 'answers'
-os.mkdir('quizzes')
-os.mkdir('answers')
+os.mkdir('./answers')           
+os.mkdir('./quizzes')
+
 # 1.Generate 5 quiz files
 for quizNum in range(5):
 
 # Create the quiz and answer key files.
 
-    answerpath = os.path.join('answers','capitalsquiz_answers%s.txt' % (quizNum + 1))
+    answerpath = os.path.join('./answers','capitalsquiz_answers%s.txt' % (quizNum + 1))
     answerKeyFile = open(answerpath,'w')
 #   print(answerpath)
 
-    quizpath = os.path.join('quizzes','capitalsquiz%s.txt' % (quizNum + 1))
+    quizpath = os.path.join('./quizzes','capitalsquiz%s.txt' % (quizNum + 1))
     quizFile = open(quizpath,'w')
 #   print(quizpath)
 
