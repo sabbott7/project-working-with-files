@@ -39,13 +39,13 @@ for quizNum in range(5):
 
 # Create the quiz and answer key files.
 
-    quizpath = os.path.join('quizzes','capitalsquiz%s.txt' % (quizNum + 1))
-    quizFile = open(quizpath,'w')
-    print(quizpath)
-
     answerpath = os.path.join('answers','capitalsquiz_answers%s.txt' % (quizNum + 1))
     answerKeyFile = open(answerpath,'w')
-    print(answerpath)
+#   print(answerpath)
+
+    quizpath = os.path.join('quizzes','capitalsquiz%s.txt' % (quizNum + 1))
+    quizFile = open(quizpath,'w')
+#   print(quizpath)
 
 #    quizFile = open('capitalsquiz%s.txt' % (quizNum + 1), 'w')
 #    answerKeyFile = open('capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
