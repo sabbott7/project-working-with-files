@@ -5,8 +5,8 @@
 import random, os
 
 #create folders -> 'quizzes' and 'answers'
-os.makedirs("./answers", exist_ok=True)           
-os.makedirs("./quizzes", exist_ok=True)
+os.makedirs('./answers', exist_ok=True)           
+os.makedirs('./quizzes', exist_ok=True)
 
 # The quiz data. Keys are states and values are their capitals.
 capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
@@ -39,7 +39,7 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 for quizNum in range(5):
 
 # Create the quiz and answer key files.
-    quizFile = open('./quizzes/capitalsquiz%s.txt' % (quizNum + 1),'w')
+    quizFile = open('./quizzes/capitalsquiz%s.txt' % (quizNum + 1), 'w')
     answerKeyFile = open('./answers/capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
 
 #    quizFile = open('capitalsquiz%s.txt' % (quizNum + 1), 'w')
@@ -58,7 +58,6 @@ for quizNum in range(5):
 
     # Get right and wrong answers.
 for questionNum in range(50):
- 
     correctAnswer = capitals[states[questionNum]]
     wrongAnswers = list(capitals.values())
     del wrongAnswers[wrongAnswers.index(correctAnswer)]
